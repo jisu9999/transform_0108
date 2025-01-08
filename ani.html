@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        margin: 50px auto;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        float: left;
+        background-color: thistle;
+        border: 1px solid transparent;
+      }
+      #box1 {
+        background-color: tan;
+        animation-name: rotate; /* 애니메이션 이름을 지정 */
+        animation-duration: 3s; /* 애니메이션 실행 시간 지정 */
+        animation-iteration-count: infinite; /* 애니메이션 반복 횟수 지정 */
+      }
+
+      #box2 {
+        background-color: pink;
+        animation: shape 3s infinite;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(90deg);
+        }
+      }
+      /* @keyframes shape{
+        from{
+            border: 1px solid #333;
+        }
+        to{
+            border: 5px solid #ec8282;
+            border-radius: 50%;
+            background-color: yellowgreen;
+        }
+        } */
+
+      @keyframes shape {
+        0% {
+          border: 1px solid #333;
+        }
+        50% {
+          border: 5px solid #ec8282;
+          border-radius: 50%;
+          background-color: yellowgreen;
+        }
+        100% {
+          border: 5px solid #ffd231;
+          border-radius: 0%;
+          background-color: yellowgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+    </div>
+  </body>
+</html>
